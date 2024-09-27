@@ -299,7 +299,7 @@ foreach (var skills in skillset)
         Console.WriteLine(skill);
     }
 }*/
-string[][] hoBBies =
+/*string[][] hoBBies =
 {
     new string[4] {"Writing", "Singing", "Dancing", "Sleeping"},
     new string[1] {"Cricket"},
@@ -312,4 +312,60 @@ foreach (var hobbys in hoBBies)
     {
         Console.WriteLine(hobby);
     }
+}*/
+
+
+
+//DOT NET FUNCTIONS
+/*void greet() // void is functions that returns nothing
+{
+    Console.WriteLine("Hi, Taha!! Welcome to our company..");
 }
+
+greet();*/ //function calling
+
+// no return  with parameters
+/*void greets(string name)
+{
+    Console.WriteLine($"Hi, {name}!! Welcome to our company.");
+}
+
+
+greets("Taha");*/
+/*string Greet()
+{
+    return ("Hi, User!! Welcome to our company");
+}*/
+
+
+//Console.WriteLine(Greet());
+//string messg = Greet();
+//Console.WriteLine(messg.ToUpper());
+
+
+/*float floatNumbers()
+{
+    return (0.7323f);
+}
+
+Console.WriteLine(floatNumbers());*/
+//float fNum = floatNumber();
+//Console.WriteLine(fNum);
+
+//RETURN WITH PARAMETERS
+//n ia used to take to the next line.
+
+
+string Greet(string name, byte age)
+{ 
+    return ($"Hola, {name}, Gracias.\n {age}");
+        
+  }
+
+//2nd method
+/*string Greet(string name, byte age)
+{ return name + " WELCOME to our company" + age; }*/
+
+
+string mssg = Greet("Jethalal", 45);
+Console.WriteLine(mssg.ToUpper());
