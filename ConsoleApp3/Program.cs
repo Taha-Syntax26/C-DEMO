@@ -226,10 +226,10 @@ foreach (string c in cities)
     Console.WriteLine(c);   
 }*/
 
-using System.Globalization;
+/*using System.Globalization;
 
 string[] cities = { "Karachi", "Lahore", "Islamabad", "Karachi", "Swat", "Quetta", "Pindi", "Multan" };
-
+*/
 // Sort the array
 /*Array.Sort(cities);
 */
@@ -510,7 +510,7 @@ names.Dequeue();*/
 
 //STACK (lifo: last in first out)
 
-Stack<string> SecondRow = new Stack<string>();
+/*Stack<string> SecondRow = new Stack<string>();
 SecondRow.Push("Taha");
 SecondRow.Push("Sumair");
 SecondRow.Push("mariam");
@@ -530,4 +530,28 @@ SecondRow.Pop();
 foreach (string item in SecondRow)
 {
     Console.WriteLine(item);
+}*/
+
+
+//DICTIONARY (generics)
+
+Dictionary<string, string> user = new Dictionary<string, string>();
+user.Add("username", "Muhammad Taha");
+user.Add("email", "mtaha080204@gmail.com");
+user.Add("pass", "696969");
+user.Add("role", "sabka pappa hu pappa");
+user.Add("image", "dikahne laik nhi.png");
+
+Console.WriteLine(user["role"]);
+//user.Remove("image");
+Console.WriteLine(user["image"]);
+
+foreach (var item in user)
+{
+    string[] test = (item.ToString().Split(','));
+    string key = test[0].Trim('[');
+    string value = test[1].Trim('[');
+    Console.WriteLine(key, value);
+    Console.WriteLine($"The Property is : {key} and the value is : {value}");
+    Console.WriteLine(test[1]);
 }
