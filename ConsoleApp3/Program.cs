@@ -456,15 +456,16 @@ Cars.Add("Audi");*/
 
 ////Cars.Remove("Honda Civic");
 ////Cars.RemoveAt(3
-///
-//Console.WriteLine(Cars.Contains("G Wagon"));
+
+///Console.WriteLine(Cars.Contains("G Wagon"));
+
 //SuperCars.Insert(1, "G wagon");
 //Console.WriteLine(SuperCars.Contains("G Wagon"));
 
 //Cars.RemoveRange(0, 2);
 /*Cars.AddRange(SuperCars);
 *///Cars.Clear();
-//Console.WriteLine(Cars.Contains("G Wagon"));
+  //Console.WriteLine(Cars.Contains("G Wagon"));
 
 /*foreach (var car in Cars)
 {
@@ -481,7 +482,7 @@ Cars.Add("Audi");*/
 
 
 
-    //QUEUES (fifo: first in first out)
+//QUEUES (fifo: first in first out)
 /*Queue<string> names = new Queue<string>();
 names.Enqueue("Owais");
 names.Enqueue("ahmed");
@@ -535,7 +536,7 @@ foreach (string item in SecondRow)
 
 //DICTIONARY (generics)
 
-Dictionary<string, string> user = new Dictionary<string, string>();
+/*Dictionary<string, string> user = new Dictionary<string, string>();
 user.Add("username", "Muhammad Taha");
 user.Add("email", "mtaha080204@gmail.com");
 user.Add("pass", "696969");
@@ -551,7 +552,123 @@ foreach (var item in user)
     string[] test = (item.ToString().Split(','));
     string key = test[0].Trim('[');
     string value = test[1].Trim('[');
-    Console.WriteLine(key, value);
+    //Console.WriteLine(key, value);
     Console.WriteLine($"The Property is : {key} and the value is : {value}");
-    Console.WriteLine(test[1]);
+    //bConsole.WriteLine(test[1]);
+}*/
+
+
+//HASHTABlEs
+
+using System;
+using System.Collections;
+///
+/*Hashtable user = new Hashtable();
+user.Add("username", "Muhammad Taha");
+user.Add("email", "mtaha080204@gmail.com");
+user.Add("pass", "696969");
+user.Add("role", "sabka pappa hu pappa");
+user.Add("image", "dikahne laik nhi.png");
+
+Console.WriteLine(user["isadmin"]);
+user.Remove("image");
+user.Contains(2.45); // true
+
+//Console.WriteLine(user["role"]);
+foreach (DictionaryEntry item in user)
+{
+    Console.WriteLine(item.Key + " : " + item.Value);
 }
+Console.WriteLine(user.GetHashCode());*/
+
+//using System.Collections;
+
+//ArrayList (Non Generic) (no fixed datatype)
+/*ArrayList Cars = new ArrayList();
+Cars.Add("Honda civic");
+Cars.Add("Honda Accord");
+Cars.Add("Toyota Camry");
+Cars.Add("toyota Fortuner");
+Cars.Add(240900);
+Cars.Add(.24f);
+
+foreach (var car in Cars)
+{
+    Console.WriteLine(car);
+}*/
+
+
+//String Methods
+//string test = """{"name": "John Doe"}""";
+
+/*using System.Collections;
+using System.Security.Cryptography;
+
+string test = " we are learning \"C#\"";
+Console.WriteLine(test);
+Console.WriteLine(test.Replace("Learning", "Mastering"));
+Console.WriteLine(test.Replace("C#", "JAVA"));
+*/
+
+
+
+//OOP
+//Object and Class
+
+Aeroplane Boeing707 = new Aeroplane(); //default constructor
+
+
+Boeing707.Name = "Boeing 707";
+Boeing707.takeOff();
+Console.WriteLine(Boeing707.Airline);
+
+Aeroplane f16 = new Aeroplane("PAF");
+
+Aeroplane f17 = new Aeroplane("PAF", "F-17 Thunder", 2, 2, "85000hp");
+f17.takeOff();
+f17.land();
+
+
+public class Aeroplane
+{
+    public string? Airline;
+    public string? Name;
+    public int Seats;
+    public int Crew;
+    public string? Power;
+
+    //Constructor
+    public Aeroplane()
+    {
+        this.Airline = "Not Specified";
+        this.Name = "Unknown";
+        this.Seats = 0;
+        this.Crew = 0;
+        this.Power = null;
+    }
+
+    public Aeroplane(string airline, string name, int seats, int crew, string power)
+    {
+        Airline = airline;
+        Name = name;
+        Seats = seats;
+        Crew = crew;
+        Power = power;
+    }
+
+    public Aeroplane(string v)
+    {
+    }
+
+    public void takeOff()
+    {
+        Console.WriteLine($"{this.Name}is  taking off. Best Wishes!!");
+    }
+
+    public void land()
+    {
+        Console.WriteLine($"{this.Name} is landing at the 4th runway..!");
+    }
+
+}
+
