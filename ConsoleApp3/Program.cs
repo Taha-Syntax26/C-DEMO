@@ -601,8 +601,8 @@ foreach (var car in Cars)
 //String Methods
 //string test = """{"name": "John Doe"}""";
 
-/*using System.Collections;
-using System.Security.Cryptography;
+
+/*using System.Security.Cryptography;
 
 string test = " we are learning \"C#\"";
 Console.WriteLine(test);
@@ -672,3 +672,54 @@ public class Aeroplane
 
 }
 
+//OOP (Object oriented Programming)
+//it is an approach to code cleaner and better.
+//readable
+//reusable
+//optimize
+//proper structure of the code is maintained.
+
+// Main pillars of OOP
+
+//1. Inheritance
+// i. Single level inheritance Vehicle -> Car
+// ii. Multi level inheritance Vehicle -> Car -> Ecar
+// iii.Heirarchical inheritance Vehicle -> Car , Vehicle-> bike
+// iv. Multiple inheritance 
+// v. hybrid inheritance  Vehicle  -> Car , Vehcile -> car -> Ecar , Car -. Ecar
+
+//2. Polymorphism
+// Method Overloading 
+//Method Overriding 
+
+//3. Abstraction
+//4. Encapsulation
+
+class Vehicle  // base class (parent) 
+{
+    public string brand = "Ford";  // Vehicle field
+    public void honk()             // Vehicle method 
+    {
+        Console.WriteLine("Tuut, tuut!");
+    }
+}
+
+class Car : Vehicle  // derived class (child)
+{
+    public string modelName = "Mustang";  // Car field
+}
+
+class Programs
+{
+    static void Main(string[] args)
+    {
+        // Create a myCar object
+        Car myCar = new Car();
+
+        // Call the honk() method (From the Vehicle class) on the myCar object
+        myCar.honk();
+
+        // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
+        Console.WriteLine(myCar.brand + " " + myCar.modelName);
+    }
+}
