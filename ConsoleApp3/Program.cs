@@ -562,6 +562,8 @@ foreach (var item in user)
 
 using System;
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 ///
 /*Hashtable user = new Hashtable();
 user.Add("username", "Muhammad Taha");
@@ -615,7 +617,7 @@ Console.WriteLine(test.Replace("C#", "JAVA"));
 //OOP
 //Object and Class
 
-Aeroplane Boeing707 = new Aeroplane(); //default constructor
+/*Aeroplane Boeing707 = new Aeroplane(); //default constructor
 
 
 Boeing707.Name = "Boeing 707";
@@ -671,7 +673,7 @@ public class Aeroplane
     }
 
 }
-
+*/
 //OOP (Object oriented Programming)
 //it is an approach to code cleaner and better.
 //readable
@@ -695,7 +697,7 @@ public class Aeroplane
 //3. Abstraction
 //4. Encapsulation
 
-class Vehicle  // base class (parent) 
+/*class Vehicle  // base class (parent) 
 {
     public string brand = "Ford";  // Vehicle field
     public void honk()             // Vehicle method 
@@ -722,4 +724,56 @@ class Programs
         // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
         Console.WriteLine(myCar.brand + " " + myCar.modelName);
     }
+}*/
+
+
+Vehicle abc = new Vehicle("AAZ-789", "Metallic grey");
+abc.Run();
+
+Car mercedez = new Car("TZ-8908", "Black", "Mercedez", "Benz C-Class", 20000000);
+//mercedez.Run();
+mercedez.Run(500);
+
+//// Parent class | Base Class | Super Class
+public class Vehicle
+{
+    public string regNo;
+    public string color;
+
+    public Vehicle(string regno, string color)
+    {
+        this.regNo = regno;
+        this.color = color;
+    }
+    public void Run()
+    {
+        Console.WriteLine($"{this.regNo} vehicle started running");
+    }
+}
+// Child class | Derived Class | Sub Class
+public class Car : Vehicle
+{
+
+    public string brand;
+    public string model;
+    public int price;
+
+    public Car(string regno, string color, string brand, string model, int price) : base(regno, color)
+    {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+    }
+
+    //method overriding
+    public void Run()
+    {
+        Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running");
+    }
+    //method overloading
+    public void Run(int speed)
+    {
+        Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running at {speed} MPH.");
+    }
+
 }
