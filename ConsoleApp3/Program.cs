@@ -561,9 +561,9 @@ foreach (var item in user)
 //HASHTABlEs
 
 using System;
-using System.Collections;
+/*using System.Collections;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;*/
 ///
 /*Hashtable user = new Hashtable();
 user.Add("username", "Muhammad Taha");
@@ -727,53 +727,258 @@ class Programs
 }*/
 
 
-Vehicle abc = new Vehicle("AAZ-789", "Metallic grey");
-abc.Run();
 
-Car mercedez = new Car("TZ-8908", "Black", "Mercedez", "Benz C-Class", 20000000);
-//mercedez.Run();
-mercedez.Run(500);
+/*using System;
+Math.Sqrt(49);
+Console.WriteLine("dkf");
 
-//// Parent class | Base Class | Super Class
+Console.WriteLine(Car.totalCars);
+Car.PayTax();
+
 public class Vehicle
 {
     public string regNo;
     public string color;
+    public static int totalCars = 0;
 
-    public Vehicle(string regno, string color)
+    public Vehicle(string regNo, string color)
     {
-        this.regNo = regno;
+        this.regNo = regNo;
         this.color = color;
     }
-    public void Run()
+
+    public virtual void Run()
     {
         Console.WriteLine($"{this.regNo} vehicle started running");
     }
 }
-// Child class | Derived Class | Sub Class
+
 public class Car : Vehicle
 {
-
     public string brand;
     public string model;
     public int price;
 
-    public Car(string regno, string color, string brand, string model, int price) : base(regno, color)
+    public Car(string regNo, string color, string brand, string model, int price)
+        : base(regNo, color)
     {
         this.brand = brand;
         this.model = model;
         this.price = price;
+        totalCars++;
     }
 
-    //method overriding
-    public void Run()
+    public override void Run()
     {
         Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running");
     }
+
+    public void Run(int speed)
+    {
+        Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running at {speed} MPH.");
+    }
+
+    public static void PayTax()
+    {
+        Console.WriteLine("Boom..! the race has begun. May the best be winner.");
+        // Implement tax payment logic if needed
+    }
+}
+  class program
+{
+    static void Main(string[] args)
+    {
+        // Creating a Vehicle instance
+        Vehicle abc = new Vehicle("AAZ-789", "Metallic grey");
+        abc.Run();
+
+        // Creating a Car instance
+        Car mercedes = new Car("TZ-8908", "Black", "Mercedes", "Benz C-Class", 20000000);
+        mercedes.Run();  // Calls overridden Run method
+        mercedes.Run(500);  // Calls overloaded Run method
+
+        // Display total cars
+        Console.WriteLine($"Total Cars: {Car.totalCars}");
+        Car.PayTax();
+    }
+}
+*/         ///THIS HAS ERROR TRY TO SOLVE  IT
+
+
+//Vehicle abc = new Vehicle("AAZ-789", "Metallic grey");
+//abc.Run();
+
+//Car MarkX = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car a = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car b = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car bv = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car g = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car MadrkX = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+
+
+//MarkX.Run();
+//MarkX.Run(300);
+
+//Math abc = new Math();
+//abc.Sqrt(49);
+
+//static function examples:
+/*Math.Sqrt(49);
+Console.WriteLine("dkf");
+
+Console.WriteLine(Car.totalCars);
+Car.paytax();
+
+
+
+abstract public class Vehicle
+{
+    public string regNo;
+    public string color;
+
+    public static int totalCars = 0;
+    public static int totalAmount = 0;
+    public static int payingCars = 0;
+    public static int nonPayingCars = 0;
+    public virtual void Run()
+    {
+        Console.WriteLine($"{this.regNo} vehicle started running");
+
+    }
+}
+abstract public class Car : Vehicle
+{
+    public string brand;
+    public string model;
+    public int price;
+    public int basePrice = 2;
+    public static int carCount = 0;
+    public Car(string regno, string color, string brand, string model, int price)
+    {
+        this.regNo = regno;
+        this.color = color;
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+        totalCars++;
+        carCount++;
+    }
+    public static void paytax()
+    {
+        Console.WriteLine("Boom..! the race has begun. May the best be winner.");
+        //payingCars++;
+        //totalAmount += this.basePrice;
+
+    }
+    //method overriding
+    public void passWithoutPaying()
+    {
+        Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running");
+        nonPayingCars++;
+    }
+
     //method overloading
     public void Run(int speed)
     {
         Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running at {speed} MPH.");
     }
 
+}*/
+
+
+/*
+//INTERFACES
+FrontEndDeveloper taha = new FrontEndDeveloper();
+taha.ComplexDesign("Muhammad Taha");
+taha.SimpleDesign();
+
+
+*//*FullStackDeveloper Ebaad = new FullStackDeveloper();
+Ebaad.SimpleDesign();
+Ebaad.ComplexAPIs();*//*
+
+//interface topicx
+//{
+//Interface
+//static
+//abstract
+//}
+
+interface FrontEndDeveloper
+{
+    public void SimpleDesign();
+
+    public void ComplexDesign(string name);
 }
+
+interface BackEndDeveloper
+{
+    public void SimpleCrud();
+
+    public void ComplexAPIs();
+
+    public void Authentication();
+
+}
+
+public class FrontEndDeveloper : FrontEndDevelopment
+{
+    public void SimpleDesign()
+    {
+        Console.WriteLine("We will provide you simple and responsive design using HTML, CSS, and JS.");
+    }
+
+    public void ComplexDesign(string name)
+    {
+        Console.WriteLine($"Hi, this is {name}. We will provide you animated and responsive design using HTML, CSS, JS, ReactJS, and NextJS.");
+    }
+}*/
+
+
+//Interfaces
+FrontEndDeveloper ashar = new FrontEndDeveloper();
+ashar.ComplexDesign("haseeb");
+ashar.SimpleDesign();
+
+//FullStackDeveloper usama new FullStackDeveloper();
+//usama.SimpleDesign();
+//usama.ComplexAPIs();
+//interface topics
+//{
+//Interfaces,
+// Static,
+// Abstract
+//}
+//1 reference
+interface FrontEndDevelopment
+{
+    //2 references
+    public void SimpleDesign();
+    public void ComplexDesign(string name);
+}
+
+interface BackEndDevelopment
+{
+    public void SimpleCrud();
+    public void ComplexAPIs();
+    public void Aunthentication();
+}
+
+public class FrontEndDeveloper : FrontEndDevelopment
+{
+    //method implementation
+
+    public void SimpleDesign()
+    {
+        Console.WriteLine("we will provide you simple and responsive design using HTML, CSS and JS");
+    }
+
+    public void ComplexDesign(string name)
+    {
+        Console.WriteLine($"hi this is {name}, we will provide you animated and responsive design using HTML, CSS, JS, React, " + $"Nextjs.");
+    }
+
+}
+
+
+
