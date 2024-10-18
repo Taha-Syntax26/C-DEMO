@@ -936,9 +936,9 @@ public class FrontEndDeveloper : FrontEndDevelopment
 
 
 //Interfaces
-FrontEndDeveloper ashar = new FrontEndDeveloper();
-ashar.ComplexDesign("haseeb");
-ashar.SimpleDesign();
+FrontEndDeveloper taha = new FrontEndDeveloper();
+taha.ComplexDesign("Muhammad Taha");
+taha.SimpleDesign();
 
 //FullStackDeveloper usama new FullStackDeveloper();
 //usama.SimpleDesign();
@@ -957,12 +957,12 @@ interface FrontEndDevelopment
     public void ComplexDesign(string name);
 }
 
-interface BackEndDevelopment
+/*interface BackEndDevelopment
 {
     public void SimpleCrud();
     public void ComplexAPIs();
     public void Aunthentication();
-}
+}*/
 
 public class FrontEndDeveloper : FrontEndDevelopment
 {
@@ -981,4 +981,97 @@ public class FrontEndDeveloper : FrontEndDevelopment
 }
 
 
+
+
+public interface BackEndDevelopment
+{
+    void SimpleCrud();
+    void ComplexAPIs(string name);
+    void Authentication();
+}
+
+public class BackEndDeveloper : BackEndDevelopment
+{
+    public void SimpleCrud()
+    {
+        Console.WriteLine("We will provide you simple and responsive design using HTML, CSS, and JS.");
+    }
+
+    public void ComplexAPIs(string name)
+    {
+        Console.WriteLine($"Hi, this is {name}. We will provide you animated and responsive design using HTML, CSS, JS, React, and Next.js.");
+    }
+
+    public void Authentication()
+    {
+        Console.WriteLine("Implementing authentication.");
+    }
+
+    public void ComplexDesign(string name)
+    {
+        Console.WriteLine($"Creating complex design for {name}.");
+    }
+
+    public void SimpleDesign()
+    {
+        Console.WriteLine("Creating simple design.");
+    }
+}
+
+/*class Program
+{
+    static void Main(string[] args)
+    {
+        BackEndDeveloper taha = new BackEndDeveloper();
+        taha.ComplexDesign("Muhammad Taha");
+        taha.SimpleDesign();
+        taha.SimpleCrud();
+        taha.ComplexAPIs("Muhammad Taha");
+        taha.Authentication();
+    }
+}
+*/
+//Multiple Inheritance
+public class FullStackDeveloper : FrontEndDevelopment, BackEndDevelopment
+{
+    public void SimpleDesign()
+    {
+        Console.WriteLine("We will provide you simple and responsive design using HTML, CSS, and JS.");
+    }
+
+    public void ComplexDesign(string name)
+    {
+        Console.WriteLine($"Hi, this is {name}. We will provide you animated and responsive design using HTML, CSS, JS, React, and Next.js.");
+    }
+
+    public void SimpleCrud()
+    {
+        Console.WriteLine("We will provide you simple CRUD operations.");
+    }
+
+    public void ComplexAPIs()
+    {
+        Console.WriteLine("We will provide you complex APIs.");
+    }
+
+    public void Authentication()
+    {
+        Console.WriteLine("We will implement authentication for your application.");
+    }
+
+    void BackEndDevelopment.SimpleCrud()
+    {
+        throw new NotImplementedException();
+    }
+
+    void BackEndDevelopment.ComplexAPIs(string name)
+    {
+        throw new NotImplementedException();
+    }
+
+    void BackEndDevelopment.Authentication()
+    {
+        throw new NotImplementedException();
+    }
+}
 
